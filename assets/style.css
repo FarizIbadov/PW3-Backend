@@ -1,0 +1,184 @@
+/* Uploading Local Fonts */
+
+@font-face {
+  src: url(fonts/Roboto-Thin.ttf);
+  font-family: Roboto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(fonts/Roboto-Regular.ttf);
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ---------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* it means 1rem = 10px */
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+table {
+  table-layout: auto;
+  max-width: 140rem;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+th,
+td {
+  padding: 1rem;
+  width: calc((100% / 7));
+  border: 1px solid black;
+}
+
+.heading-container,
+.footer-container {
+  max-width: 140rem;
+  width: 100%;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  font-size: 6rem;
+  font-weight: 100;
+}
+
+.heading-search {
+  display: inline-block;
+  font: inherit;
+  padding-left: 1rem;
+  font-size: 2rem;
+  width: 30rem;
+  height: 4rem;
+  border: 1px solid #000;
+  border-radius: 1rem;
+}
+
+.heading-search:focus {
+  outline: none;
+}
+
+th,
+td {
+  height: 6rem;
+  text-align: center;
+}
+
+.select {
+  font: inherit;
+  display: inline-block;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  text-align-last: center;
+  width: 20rem;
+  height: 5rem;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: rgb(72, 72, 255);
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.pagination > button {
+  font: inherit;
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: transparent;
+  border: 1px solid rgb(72, 72, 255);
+  color: rgb(72, 72, 255);
+  border-radius: 1rem;
+
+  display: inline-block;
+  height: 5rem;
+  padding: 0 1rem;
+
+  width: 5rem;
+  transition: all 0.1s;
+}
+
+.pagination > button:not(:last-of-type) {
+  margin-right: 0.5rem;
+}
+
+.pagination > button.large {
+  width: 10rem;
+}
+
+.pagination > button:hover,
+.pagination > button.active {
+  background-color: rgb(72, 72, 255);
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .heading-container,
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .heading-container > .heading {
+    font-size: 4rem;
+  }
+
+  .heading-container > .heading-search {
+    margin-top: 2rem;
+  }
+
+  .footer-container > .pagination {
+    margin-top: 3rem;
+  }
+
+  .footer-container > .pagination > button {
+    font-size: 1rem;
+  }
+
+  .footer-container > .pagination > button:not(.large) {
+    width: 4rem;
+  }
+
+  .footer-container > .pagination > button.large {
+    width: 5rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  th,
+  td {
+    font-size: 1rem;
+  }
+}
